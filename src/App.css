@@ -1,22 +1,46 @@
 .App {
-  text-align: center;
+	background-color: OldLace;
+	height: 100vh;
+	width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
+.app-name {
+	max-height: 5vh;
+	font-size: 4vh;
+	font-weight: bolder;
+	margin-right: 1vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-text-blue {
+	font-style: italic;
+	display: inline-block;
 }
 
-.App-link {
-  color: #09d3ac;
+.header-text-red {
+	font-style: italic;
+	display: inline-block;
+}
+
+.header-text-blue::first-letter {
+	color: RoyalBlue;
+}
+
+.header-text-red::first-letter {
+	color: OrangeRed;
+}
+
+.right-aligned-text {
+	text-align: right;
+}
+
+.file-folder-background {
+	background-color: Beige;
+	border: 1px solid Chocolate;
+}
+
+.file-folder-body {
+	padding: 10px 5px 5px 5px;
+	height: 90%;
+	margin: 0 1vw 1vh 1vw;
+	border-radius: 0 10px 10px 10px;
 }
