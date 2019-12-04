@@ -39,7 +39,23 @@
 
 .file-folder-body {
 	padding: 10px 5px 5px 5px;
-	height: 90%;
-	margin: 0 1vw 1vh 1vw;
+	height: 85%;
+	margin: 5px 1vw 1vh 1vw;
 	border-radius: 0 10px 10px 10px;
+}
+
+.file-folder-nav-bar {
+	margin: 0 1vw;
+}
+
+.nav-bar-tab {
+	padding: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-bottom: none !important;
+	border-radius: 3px 3px 0 0;
+}
+
+.active-tab {
+	padding-bottom: 6px !important;
 }

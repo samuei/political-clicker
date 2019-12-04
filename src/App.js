@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import NavBar from './components/NavBar';
 import PartyNameField from './components/PartyNameField';
 import './App.css';
 
@@ -22,7 +23,7 @@ class App extends Component {
 	
 	// Swaps active tab to the selected argument
 	tabSwapFn(targetTabName) {
-		if (targetTabName && targetTabName.length) {
+		if (targetTabName && targetTabName.length && targetTabName !== this.state.activeTab) {
 			this.setState({
 				activeTab: targetTabName
 			});
@@ -46,11 +47,16 @@ class App extends Component {
 	}
 	
 	render() {
+		
+		// TODO: modularize tab listing
+		const tabList = ['Overview'];
+		
 		return (
 			<div className='App'>
 				<header className='right-aligned-text app-name' >
 					<span className='header-text-blue'>Political</span> <span className='header-text-red'>Clicker</span>
 				</header>
+				<NavBar activeTab={this.state.activeTab} tabSwapFn={this.tabSwapFn} tabList={tabList} />
 				<div className='file-folder-background file-folder-body'>
 					<PartyNameField
 						title='Party Name'
