@@ -112,7 +112,11 @@ class PartyNameField extends Component {
 					value={this.state.fieldVal}
 					onChange={this.handleValueChange}
 					maxLength={100}
-					size={this.state.fieldVal.length}
+					style={{ 
+						width: this.state.fieldVal.length + 'ch', 
+						fontFamily: 'Lucida Sans Typewriter, Courier New, monospace', 
+						padding: '2px 1em' 
+					}}
 				/>
 				<button
 					onClick={this.handleReset}

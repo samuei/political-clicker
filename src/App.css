@@ -9,15 +9,14 @@
 	font-size: 4vh;
 	font-weight: bolder;
 	margin-right: 1vw;
+	font-style: italic;
 }
 
 .header-text-blue {
-	font-style: italic;
 	display: inline-block;
 }
 
 .header-text-red {
-	font-style: italic;
 	display: inline-block;
 }
 
