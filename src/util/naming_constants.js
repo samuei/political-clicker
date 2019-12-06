@@ -43,7 +43,7 @@ export const POLITICAL_PREFIX = [
 	'Semi-',
 	'Demi-',
 	'Regional ',
-	'Syncretic',
+	'Syncretic ',
 	'Agnatic ',
 	'Cognatic ',
 	'Enatic ',
