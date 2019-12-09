@@ -11,12 +11,14 @@ class App extends Component {
 		// Default state values
 		this.state = {
 			activeTab: 'Overview',
+			tabList: ['Overview', 'Settings'],
 			partyName: '',
 			oppositionPartyName: ''
 		};
 		
 		// Function bindings
 		this.tabSwapFn = this.tabSwapFn.bind(this);
+		this.tabPopulateFn = this.tabPopulateFn.bind(this);
 		this.updatePartyName = this.updatePartyName.bind(this);
 		this.updateOppositionPartyName = this.updateOppositionPartyName.bind(this);
 	}
@@ -27,6 +29,22 @@ class App extends Component {
 			this.setState({
 				activeTab: targetTabName
 			});
+		}
+	}
+	
+	// Insert or delete tab to the navbar
+	tabPopulateFn(tabName) {
+		if (tabName) {
+			let newTabList = this.state.tabList;
+			if (this.state.tabList.includes(tabName)) {
+				newTabList = newTabList.filter((tab) => tab !== tabName);
+			}
+			else {
+				// I want settings to always be in the back, so we're gonna juggle a little
+				newTabList.pop();
+				newTabList.push(tabName);
+				newTabList.push('Settings');
+			}
 		}
 	}
 	
@@ -47,16 +65,12 @@ class App extends Component {
 	}
 	
 	render() {
-		
-		// TODO: modularize tab listing
-		const tabList = ['Overview'];
-		
 		return (
 			<div className='App'>
 				<header className='right-aligned-text app-name' >
 					<span className='header-text-blue'>Political</span> <span className='header-text-red'>Clicker</span>
 				</header>
-				<NavBar activeTab={this.state.activeTab} tabSwapFn={this.tabSwapFn} tabList={tabList} />
+				<NavBar activeTab={this.state.activeTab} tabSwapFn={this.tabSwapFn} tabList={this.state.tabList} />
 				<div className='file-folder-background file-folder-body'>
 					<PartyNameField
 						title='Party Name'
