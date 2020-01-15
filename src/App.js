@@ -1,6 +1,6 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import NavBar from './components/NavBar';
-import PartyNameField from './components/PartyNameField';
+import SettingsTab from './components/settings/SettingsTab.js';
 import './App.css';
 
 // Top level component for the application
@@ -72,15 +72,12 @@ class App extends Component {
 				</header>
 				<NavBar activeTab={this.state.activeTab} tabSwapFn={this.tabSwapFn} tabList={this.state.tabList} />
 				<div className='file-folder-background file-folder-body'>
-					<PartyNameField
-						title='Party Name'
-						value={this.state.partyName}
-						saveFn={this.updatePartyName}
-					/>
-					<PartyNameField
-						title='Opposition Party Name'
-						value={this.state.oppositionPartyName}
-						saveFn={this.updateOppositionPartyName}
+					<SettingsTab
+						activeTab={this.state.activeTab}
+						partyName={this.state.partyName}
+						oppositionPartyName={this.state.oppositionPartyName}
+						updatePartyName={this.updatePartyName}
+						updateOppositionPartyName={this.updateOppositionPartyName}
 					/>
 				</div>
 			</div>

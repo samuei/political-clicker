@@ -1,5 +1,5 @@
-import React, { Component }  from 'react';
-import {POLITICAL_PREFIX, POLITICAL_PARTY_NAME} from '../util/naming_constants';
+import React, { Component } from 'react';
+import {POLITICAL_PREFIX, POLITICAL_PARTY_NAME} from '../../util/naming_constants';
 
 class PartyNameField extends Component {
 	constructor(){

@@ -59,3 +59,10 @@
 .active-tab {
 	padding-bottom: 6px !important;
 }
+
+.paper {
+	background: white;
+	padding: 15px;
+	height: 95%;
+	border: 1px solid gray;
+}
