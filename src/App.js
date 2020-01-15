@@ -45,6 +45,9 @@ class App extends Component {
 				newTabList.push(tabName);
 				newTabList.push('Settings');
 			}
+			this.setState({
+				tabList: newTabList
+			});
 		}
 	}
 	
