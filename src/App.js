@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
+import OverviewTab from './components/overview/OverviewTab.js';
 import SettingsTab from './components/settings/SettingsTab.js';
 import './App.css';
 
@@ -75,6 +76,11 @@ class App extends Component {
 				</header>
 				<NavBar activeTab={this.state.activeTab} tabSwapFn={this.tabSwapFn} tabList={this.state.tabList} />
 				<div className='file-folder-background file-folder-body'>
+					<OverviewTab
+						activeTab={this.state.activeTab}
+						partyName={this.state.partyName}
+						oppositionPartyName={this.state.oppositionPartyName}
+					/>
 					<SettingsTab
 						activeTab={this.state.activeTab}
 						partyName={this.state.partyName}
