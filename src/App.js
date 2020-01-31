@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import OverviewTab from './components/overview/OverviewTab.js';
+import FundraisingTab from './components/fundraising/FundraisingTab.js';
 import SettingsTab from './components/settings/SettingsTab.js';
 import './App.css';
 
@@ -12,9 +13,10 @@ class App extends Component {
 		// Default state values
 		this.state = {
 			activeTab: 'Overview',
-			tabList: ['Overview', 'Settings'],
+			tabList: ['Overview', 'Fundraising', 'Settings'],
 			partyName: '',
-			oppositionPartyName: ''
+			oppositionPartyName: '',
+			availableFunds: 20
 		};
 		
 		// Function bindings
@@ -80,6 +82,10 @@ class App extends Component {
 						activeTab={this.state.activeTab}
 						partyName={this.state.partyName}
 						oppositionPartyName={this.state.oppositionPartyName}
+					/>
+					<FundraisingTab
+						activeTab={this.state.activeTab}
+						availableFunds={this.state.availableFunds}
 					/>
 					<SettingsTab
 						activeTab={this.state.activeTab}
