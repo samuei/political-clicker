@@ -13,7 +13,7 @@ class App extends Component {
 		// Default state values
 		this.state = {
 			activeTab: 'Overview',
-			tabList: ['Overview', 'Fundraising', 'Settings'],
+			tabList: ['Overview', 'Settings'],
 			partyName: '',
 			oppositionPartyName: '',
 			availableFunds: 20
@@ -68,6 +68,10 @@ class App extends Component {
 				oppositionPartyName: nameString
 			});
 		}
+	}
+	
+	componentDidMount() {
+		this.tabPopulateFn('Fundraising');
 	}
 	
 	render() {
