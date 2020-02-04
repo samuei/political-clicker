@@ -24,6 +24,7 @@ class App extends Component {
 		this.tabPopulateFn = this.tabPopulateFn.bind(this);
 		this.updatePartyName = this.updatePartyName.bind(this);
 		this.updateOppositionPartyName = this.updateOppositionPartyName.bind(this);
+		this.manualMoneyClick = this.manualMoneyClick.bind(this);
 	}
 	
 	// Swaps active tab to the selected argument
@@ -69,7 +70,15 @@ class App extends Component {
 			});
 		}
 	}
-	
+
+	manualMoneyClick() {
+		this.setState((prevState) => {
+			return {
+				availableFunds: prevState.availableFunds + Math.round(Math.random() * 10)
+			};
+		});
+	}
+
 	componentDidMount() {
 		this.tabPopulateFn('Fundraising');
 	}
@@ -90,6 +99,7 @@ class App extends Component {
 					<FundraisingTab
 						activeTab={this.state.activeTab}
 						availableFunds={this.state.availableFunds}
+						manualMoneyClick={this.manualMoneyClick}
 					/>
 					<SettingsTab
 						activeTab={this.state.activeTab}
