@@ -32,6 +32,7 @@ class FundraisingTab extends Component {
 				<button
 					onClick={this.begForMoney}
 					type='button'
+					title='Beg random strangers for money on the street'
 				>
 					Canvas for Donations
 				</button>
