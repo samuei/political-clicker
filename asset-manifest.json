@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/political-clicker/static/css/main.66243517.chunk.css",
+    "main.js": "/political-clicker/static/js/main.6f5580cc.chunk.js",
+    "main.js.map": "/political-clicker/static/js/main.6f5580cc.chunk.js.map",
+    "runtime-main.js": "/political-clicker/static/js/runtime-main.85fc64f4.js",
+    "runtime-main.js.map": "/political-clicker/static/js/runtime-main.85fc64f4.js.map",
+    "static/js/2.afd35491.chunk.js": "/political-clicker/static/js/2.afd35491.chunk.js",
+    "static/js/2.afd35491.chunk.js.map": "/political-clicker/static/js/2.afd35491.chunk.js.map",
+    "index.html": "/political-clicker/index.html",
+    "precache-manifest.a9c6c6d0d70069c64d80ce94c3203f49.js": "/political-clicker/precache-manifest.a9c6c6d0d70069c64d80ce94c3203f49.js",
+    "service-worker.js": "/political-clicker/service-worker.js",
+    "static/css/main.66243517.chunk.css.map": "/political-clicker/static/css/main.66243517.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85fc64f4.js",
+    "static/js/2.afd35491.chunk.js",
+    "static/css/main.66243517.chunk.css",
+    "static/js/main.6f5580cc.chunk.js"
+  ]
+}
