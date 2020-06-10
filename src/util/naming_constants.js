@@ -78,7 +78,10 @@ export const POLITICAL_PREFIX = [
 	'Alter-',
 	'Gestalt ',
 	'Global ',
-	'Omni-'
+	'Omni-',
+	'Underground ',
+	'Autonomous ',
+	'Flux '
 ];
 
 export const POLITICAL_PARTY_NAME = [
