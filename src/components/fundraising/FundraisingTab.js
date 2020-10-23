@@ -15,9 +15,13 @@ class FundraisingTab extends Component {
 	}
 	
 	begForMoney() {
+		let amount = Math.round(Math.random() * 10);
+
 		this.setState({
 			actionMessage: CANVASING_ACTION[Math.floor(Math.random() * CANVASING_ACTION.length)]
-		}, this.props.manualMoneyClick);
+		}, () => {
+			this.props.updateFundsFn({add: amount});
+		});
 	}
 	
 	render() {
