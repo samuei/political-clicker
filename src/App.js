@@ -24,7 +24,7 @@ const App = () => {
 	};
 
 	const availableFundsReducer = (state, action) => {
-		let newFunds = state;
+		let newFunds = state ? state : 0;
 
 		if (action.add) {
 			newFunds += action.add;
