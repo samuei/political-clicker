@@ -14,7 +14,9 @@ const FundraisingTab = ({activeTab = false, availableFunds = 0, updateFundsFn}) 
 
 	const displayStyle = activeTab === 'Fundraising' ? 'block' : 'none';
 
-	const displayActionMessage = actionMessage ? <p>{actionMessage}</p> : null;
+	const displayActionMessage = actionMessage
+		? <p>{actionMessage}</p>
+		: <p>You should probably raise some money</p>;
 
 	return (
 		<div className='paper' style={{ display: displayStyle }}>
